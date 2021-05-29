@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Random</title>
+
+    <script>
+    function Click()
+    {
+      var value = document.getElementById('name').value;
+      var array = value.split(",");
+      var i = coworker.length;
+      var number = Math.floor(Math.random() * i);
+      document.getElementById('display').innerHTML = array[number];
+    }
+
+    function caution(){
+      alert("Please put a comma between the names");
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Random Name Picking Game</h1>
+    <br>
+    <h2>Type the name of the participants on the following text box</h2>
+
+    <input id=name type = "text">
+    <br>
+
+    <button id="caution" onclick="caution()">Caution</button>
+    <br>
+
+    <h2>Click the following of the button to pick a random person</h2>
+    <button id="picking" onclick="Click()">Click</button>
+
+    <br>
+    <p id = "display">The result of the random picking</p>
+  </body>
+</html>
